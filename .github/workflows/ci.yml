@@ -15,5 +15,5 @@ jobs:
     - name: Run CI check
       run: echo "CI pipeline successfull"
 
-    -name: Verify project
-    -run: test -f README.md
+    - name: Verify project
+      run: test -f README.md
