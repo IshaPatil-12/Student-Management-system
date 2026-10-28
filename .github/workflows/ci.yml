@@ -1,17 +1,19 @@
 name: Student Management CI
 
-on: [push , pull_request ]
+on:
+  push:
+  pull_request:
 
 jobs:
   check:
-  runs-on: ubuntu-latest
+    runs-on: ubuntu-latest
 
-  steps:
-  - name: Get source code
-    uses: actions/checkout@v4
+    steps:
+    - name: Get source code
+      uses: actions/checkout@v4
 
-  - name: Run CI check
-    run: echo "CI pipeline successfull"
+    - name: Run CI check
+      run: echo "CI pipeline successfull"
 
-  -name: Verify project
-  -run: test -f README.md
+    -name: Verify project
+    -run: test -f README.md
